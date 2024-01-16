@@ -163,6 +163,7 @@ def pushMessage(token, title, message):
     """
     url = f"http://www.pushplus.plus/send?token={token}&title={title}&content={message}&template=html"
     res = requests.get(url).json()
+    print("推送：",res)
 
 
 def main(_user, _password, _step_min, _step_max):
